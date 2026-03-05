@@ -5,6 +5,12 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ToDoList toDoList = new ToDoList();
+        FileManager fileManager = new FileManager();
+
+        List<ToDoItem> loaded = fileManager.loadTasks();
+        for (ToDoItem item : loaded) {
+            toDoList.addTask(item.getTitle(), item.getDescription());
+        }
 
         while(true) {
             showMenu();
@@ -44,6 +50,7 @@ public class Main {
                     break;
                 
                 case 0:
+                    fileManager.saveTasks(toDoList.getAllTask());
                     System.out.println("Closing this program...");
                     sc.close();
                     return;
