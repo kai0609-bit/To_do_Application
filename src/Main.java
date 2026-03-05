@@ -7,7 +7,7 @@ public class Main {
         ToDoList toDoList = new ToDoList();
 
         while(true) {
-            System.out.println("1. Show All Task 2. Add new Task 3. Remove Task  4. End");
+            showMenu();
             int user_input = sc.nextInt();
 
             switch (user_input) {
@@ -28,12 +28,22 @@ public class Main {
                     break;         
                 
                 case 3:
-                    System.out.println("Enter the id that you want to remove: ");
-                    int id = sc.nextInt();
-                    toDoList.removeTask(id);
+                    System.out.print("Enter the task id that you want to remove: ");
+                    int removeId = sc.nextInt();
+                    toDoList.removeTask(removeId);
+                    break;
+
+                case 4:
+                    System.out.print("Enter the task id that you want to change its status: ");
+                    int toggleId = sc.nextInt();
+                    if (toDoList.toggleTask(toggleId)) {
+                        System.out.println("Status changed!");
+                    } else {
+                        System.out.println("Task not found.");
+                    }
                     break;
                 
-                case 4:
+                case 0:
                     System.out.println("Closing this program...");
                     sc.close();
                     return;
@@ -41,7 +51,16 @@ public class Main {
                 default:
                     System.out.println("Invalid input.");
             }
-            
         }
+    }
+
+    private static void showMenu() {
+        System.out.println("=== ToDo App ===");
+        System.out.println("1. Show all Tasks");
+        System.out.println("2. Add new task");
+        System.out.println("3. Remove task");
+        System.out.println("4. Change task status");
+        System.out.println("0. End this app");
+        System.out.print("Select: ");
     }
 }
