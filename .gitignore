@@ -1,0 +1,5 @@
+# Compiled Java files
+*.class
+
+# Data file
+tasks.csv

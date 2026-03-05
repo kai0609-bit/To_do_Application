@@ -1,7 +1,7 @@
 # ToDo Application
 
 ## Overview
-This Application is for makeing list of everyday tasks
+This Application is for making list of everyday tasks
 
 ## Features
 - See all tasks that you are currently having.
