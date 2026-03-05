@@ -1,18 +1,32 @@
-## Getting Started
+# ToDo Application
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Overview
+This Application is for makeing list of everyday tasks
 
-## Folder Structure
+## Features
+- See all tasks that you are currently having.
+- Add new task into list.
+- delete the task you want. 
+- you can change task status to "completed" or "not completed".
+- Read and load csv file.
 
-The workspace contains two folders by default, where:
+## Requirements
+- Java 21.0.8
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## How to run
+You can run this application in your terminal.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## What I learned
+- **OOP design**: Structured the app into multiple classes (ToDoItem, ToDoList, 
+FileManager, Main) to separate responsibilities and improve maintainability.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Git workflow**: Managed source code with Git and GitHub, committing 
+at each meaningful milestone.
 
-## Dependency Management
+- **File I/O**: Implemented CSV read/write using FileWriter and BufferedReader, 
+including exception handling for file operations.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+- **User input handling**: Used Scanner with switch statements to build 
+an interactive console menu.
+
+ 
