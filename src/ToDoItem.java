@@ -24,6 +24,11 @@ public class ToDoItem {
     public void setDescription(String description) {this.description = description; }
     public void setCompleted(boolean isCompleted) {this.isCompleted = isCompleted; }
 
+    // Method to toggle isComplete
+    public void toggleCompleted() {
+        this.isCompleted = !isCompleted;
+    } 
+
     // Display
     @Override
     public String toString() {
